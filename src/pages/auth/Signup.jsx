@@ -15,7 +15,7 @@ const Signup = () => {
         }
         setErrors({});
         const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers")) || [];
-        const userExist = registeredUser.find((user) => user.email.toLowerCase() === formData.email.toLocaleLowerCase());
+        const userExist = registeredUsers.find((user) => user.email.toLowerCase() === formData.email.toLowerCase());
         if (userExist) {
             alert("Email is already registerd")
             return;
@@ -25,7 +25,7 @@ const Signup = () => {
             status: formData.role === "lawyer" ? "pending" : "approved",
         };
         registeredUsers.push(userData);
-        localStorage.setItem("registerdUsers", JSON.stringify(registeredUsers));
+        localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
         alert("Account Created Successfully");
         navigate("/login");
     };

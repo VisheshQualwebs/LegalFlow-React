@@ -1,29 +1,26 @@
-import { useNavigate } from "react-router-dom";
+import Sidebar from "../../components/client/Sidebar";
+import Navbar from "../../components/client/Navbar";
+import DashboardCard from "../../components/client/DashboardCard";
 
-function Dashboard() {
-    const navigate = useNavigate();
-    const user = localStorage.getItem("user");
-    const logout = () => {
-        localStorage.removeItem("user");
-        navigate("/login");
-    };
+const Dashboard = () => {
+
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center gap-5">
-
-            <h1 className="text-4xl font-bold">
-                Dashboard
-            </h1>
-
-            <h2 className="text-2xl">
-                Welcome {user?.email}
-            </h2>
-
-            <button onClick={logout} className="bg-red-500 text-white px-6 py-3 rounded">
-                Logout
-            </button>
-
+        <div className="flex min-h-screen bg-gray-100">
+            <Sidebar />
+            <div className="flex-1">
+                <Navbar />
+                <div className="p-8">
+                    <div className="grid grid-cols-4 gap-6">
+                        <DashboardCard title="Total Cases" value="0" />
+                        <DashboardCard title="Pending Cases" value="0" />
+                        <DashboardCard title="Active Cases" value="0" />
+                        <DashboardCard title="Completed Cases" value="0" />
+                    </div>
+                </div>
+            </div>
         </div>
+
     );
-}
+};
 
 export default Dashboard;
