@@ -30,10 +30,6 @@ const Sidebar = () => {
                         My Cases
                     </Link>
 
-                    <Link to="/client/documents" className="block hover:text-gray-400">
-                        Documents
-                    </Link>
-
                     <Link to="/client/payments" className="block hover:text-gray-400">
                         Payments
                     </Link>
@@ -56,10 +52,6 @@ const Sidebar = () => {
 
                     <Link to="/lawyer/clients" className="block hover:text-gray-400">
                         Clients
-                    </Link>
-
-                    <Link to="/lawyer/documents" className="block hover:text-gray-400">
-                        Documents
                     </Link>
 
                     <Link to="/lawyer/payments" className="block hover:text-gray-400">
