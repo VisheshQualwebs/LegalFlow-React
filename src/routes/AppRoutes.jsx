@@ -16,7 +16,6 @@ import Login from "../pages/auth/Login";
 import Signup from "../pages/auth/Signup";
 import ClientCases from "../pages/client/ClientCases";
 import ClientDashboard from "../pages/client/ClientDashboard";
-import ClientDocuments from "../pages/client/ClientDocuments";
 import ClientPayments from "../pages/client/ClientPayments";
 import ClientProfile from "../pages/client/ClientProfile";
 import CreateCase from "../pages/client/CreateCase";
@@ -24,7 +23,6 @@ import FindLawyers from "../pages/client/Findlawyers";
 import Clients from "../pages/lawyer/Clients";
 import LawyerCases from "../pages/lawyer/LawyerCases";
 import LawyerDashboard from "../pages/lawyer/LawyerDashboard";
-import LawyerDocuments from "../pages/lawyer/LawyerDocuments";
 import LawyerPayments from "../pages/lawyer/LawyerPayments";
 import LawyerProfile from "../pages/lawyer/LawyerProfile";
 import ProtectedRoutes from "./ProtectedRoutes";
@@ -43,7 +41,6 @@ function AppRoutes() {
                 <Route path="dashboard" element={<LawyerDashboard />} />
                 <Route path="payments" element={<LawyerPayments />} />
                 <Route path="my-cases" element={<LawyerCases />} />
-                <Route path="documents" element={<LawyerDocuments />} />
                 <Route path="clients" element={<Clients />} />
                 <Route path="profile" element={<LawyerProfile />} />
             </Route>
@@ -68,7 +65,6 @@ function AppRoutes() {
                 <Route path="find-lawyers" element={<FindLawyers />} />
                 <Route path="create-case" element={<CreateCase />} />
                 <Route path="my-cases" element={<ClientCases />} />
-                <Route path="documents" element={<ClientDocuments />} />
                 <Route path="payments" element={<ClientPayments />} />
                 <Route path="profile" element={<ClientProfile />} />
             </Route>

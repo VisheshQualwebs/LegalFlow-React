@@ -1,6 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
     
     const user = JSON.parse(localStorage.getItem("user"));
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        const confirmLogout = window.confirm("Are you sure you want to logout?");
+        if(!confirmLogout) return;
+        localStorage.removeItem("user");
+        navigate("/login");
+    }
 
     return (
         <div className="bg-white shadow p-5 flex justify-between items-center">
@@ -8,7 +19,7 @@ const Navbar = () => {
                 Welcome, {user.fullName}
             </h1>
 
-            <button className="bg-red-600 text-white px-5 py-2 rounded">
+            <button onClick={handleLogout} className="bg-red-600 text-white px-5 py-2 rounded">
                 Logout
             </button>
         </div>

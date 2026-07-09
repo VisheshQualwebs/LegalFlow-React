@@ -43,7 +43,6 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("submitted");
         const validationErrors = validateForm();
 
         if (Object.keys(validationErrors).length > 0) {
