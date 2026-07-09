@@ -2,7 +2,7 @@ import Sidebar from "../../components/client/Sidebar";
 import Navbar from "../../components/client/Navbar";
 import DashboardCard from "../../components/client/DashboardCard";
 
-const Dashboard = () => {
+const ClientDashboard = () => {
     return (
         <div className="p-8">
             <div className="grid grid-cols-4 gap-6">
@@ -15,4 +15,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default ClientDashboard;

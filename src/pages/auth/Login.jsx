@@ -85,7 +85,6 @@ const Login = () => {
         localStorage.setItem("user", JSON.stringify(user));
         alert("Login Successful");
         if (user.role === "client") {
-            alert("admin dashboard open")
             navigate("/client/dashboard");
         } else if (user.role === "lawyer") {
             navigate("/lawyer/dashboard");

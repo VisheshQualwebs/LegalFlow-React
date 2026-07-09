@@ -1,0 +1,7 @@
+function LawyerPayments () {
+    return (
+        <h1>Payment Page</h1>
+    )
+};
+
+export default LawyerPayments;

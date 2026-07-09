@@ -62,7 +62,7 @@ const CreateCase = () => {
             ...formData,
         };
         registerCase.push(caseData);
-        localStorage.setItem("registerCase", JSON.stringify(registerCase));
+        localStorage.setItem("registerCase", JSON.stringify(caseData));
         alert("Case Registered Successfully");
         navigate("/client/dashboard");
     };

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const MyCases = () => {
+const ClientCases = () => {
 
     const [cases, setCases] = useState([]);
     const [search, setSearch] = useState("");
@@ -51,21 +51,10 @@ const MyCases = () => {
                             {filteredCases.length > 0 ? (
                                 filteredCases.map((item) => (
                                     <tr key={item.id} className="border-b">
-                                        <td className="p-4">
-                                            {item.name}
-                                        </td>
-
-                                        <td className="p-4">
-                                            {item.title}
-                                        </td>
-
-                                        <td className="p-4">
-                                            {item.caseType}
-                                        </td>
-
-                                        <td className="p-4">
-                                            {item.court}
-                                        </td>
+                                        <td className="p-4">{item.name}</td>
+                                        <td className="p-4">{item.title}</td>
+                                        <td className="p-4"> {item.caseType} </td>
+                                        <td className="p-4">{item.court}</td>
                                     </tr>
                                 ))
                             ) : (
@@ -81,4 +70,4 @@ const MyCases = () => {
     );
 };
 
-export default MyCases;
+export default ClientCases;
