@@ -57,12 +57,12 @@ const CreateCase = () => {
         const caseData = {
             id: Date.now(),
             clientId: user.email,
-            clientName: user.fullName,
-            status: "Pending",
+            clientName: user.name,
+            status: "Active",
             ...formData,
         };
         registerCase.push(caseData);
-        localStorage.setItem("registerCase", JSON.stringify(caseData));
+        localStorage.setItem("registerCase", JSON.stringify(registerCase));
         alert("Case Registered Successfully");
         navigate("/client/dashboard");
     };
